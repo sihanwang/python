@@ -1,0 +1,71 @@
+mport turtle as t
+import random
+t.speed (0)
+t.color("red")
+t.forward(100)
+t.left(90)
+t.forward(70)
+t.left(90)
+t.forward(30)
+t.right(120)
+t.forward(30)
+t.left(90)
+t.forward(20)
+t.left(120)
+t.forward(105)
+t.right(90)
+t.forward(20)
+t.right(90)
+t.forward(70)
+t.right(90)
+t.forward(20)
+t.backward(20)
+t.right(90)
+t.forward(30)
+t.left(90)
+t.forward(52)
+t.right(90)
+t.forward(15)
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(25)
+t.backward(70)
+t.left(90)
+t.forward(45)
+t.left(90)
+t.forward(35)
+t.left(120)
+t.forward(20)
+t.left(90)
+t.forward(30)
+t.left(60)
+t.forward(4)
+t.right(90)
+t.forward(30)
+t.right(90)
+t.forward(48)
+for i in range(10):
+    # 位置
+    x = random.randint(-200, 200)
+    y = random.randint(-200, 200)
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+    # 颜色
+    color = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)]
+    t.colormode(255)
+    t.color(tuple(color))
+
+    # 大小
+    size = random.randint(20, 60)
+    num = random.randint(5, 12)
+    t.begin_fill()
+    for j in range(num):
+        for k in range(2):
+            t.circle(size, 90)
+            t.left(90)
+        t.left(360 / num)
+
+t.done
